@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-8">
+        <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+            <h1 class="text-2xl font-bold mb-6 text-center">Crop Prediction Form</h1>
+            <form action="/predict" method="POST" class="space-y-4">
+                <div>
+                    <label for="nitrogen" class="block text-gray-700">Nitrogen:</label>
+                    <input type="number" id="nitrogen" name="nitrogen" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div>
+                    <label for="phosphorus" class="block text-gray-700">Phosphorus:</label>
+                    <input type="number" id="phosphorus" name="phosphorus" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div>
+                    <label for="potassium" class="block text-gray-700">Potassium:</label>
+                    <input type="number" id="potassium" name="potassium" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div>
+                    <label for="temperature" class="block text-gray-700">Temperature (°C):</label>
+                    <input type="number" step="any" id="temperature" name="temperature" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div>
+                    <label for="humidity" class="block text-gray-700">Humidity (%):</label>
+                    <input type="number" step="any" id="humidity" name="humidity" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div>
+                    <label for="ph_value" class="block text-gray-700">pH Value:</label>
+                    <input type="number" step="any" id="ph_value" name="ph_value" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div>
+                    <label for="rainfall" class="block text-gray-700">Rainfall (mm):</label>
+                    <input type="number" step="any" id="rainfall" name="rainfall" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white p-3 rounded mt-4">Predict Crop</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
